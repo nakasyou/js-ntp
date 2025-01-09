@@ -1,0 +1,10 @@
+{
+  "name": "@ns/ntp",
+  "version": "0.1.0",
+  "exports": "./mod.ts",
+  "license": "MIT",
+  "fmt": {
+    "semicolons": false,
+    "singleQuote": true
+  }
+}
