@@ -29,7 +29,7 @@ export class NTP {
    * @param abortSignal AbortSignal to abort the request
    * @returns Time in milliseconds
    */
-  getTime(abortSignal = AbortSignal.timeout(1000)): Promise<number> {
+  getTime(abortSignal: AbortSignal = AbortSignal.timeout(1000)): Promise<number> {
     const socket = dgram.createSocket('udp4')
 
     const firstPacket = Buffer.alloc(48)
@@ -68,7 +68,7 @@ export class NTP {
    * @param abortSignal AbortSignal to abort the request
    * @returns Date
    */
-  async getDate(abortSignal = AbortSignal.timeout(1000)): Promise<Date> {
+  async getDate(abortSignal: AbortSignal = AbortSignal.timeout(1000)): Promise<Date> {
     return new Date(await this.getTime(abortSignal))
   }
 }
